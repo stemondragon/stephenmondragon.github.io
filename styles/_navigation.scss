@@ -1,0 +1,74 @@
+.buttons {
+  position: fixed;
+  bottom: 10%;
+  right: 7%;
+  display: flex;
+  gap: 1.4rem;
+  z-index: 10;
+}
+
+.active-btn {
+  background-color: $color-primary1 !important;
+  transition: $transition;
+
+  i {
+    color: $color-white !important;
+  }
+}
+
+.btn {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: $color-grey4;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7rem 0;
+  box-shadow: $box-shadow-1;
+
+  i {
+    font-size: 1.2rem;
+    color: $color-grey2;
+    pointer-events: none;
+  }
+}
+
+////////// MEDIA Q-LARGEST /////////
+
+@media only screen and (max-width: $break-largest) {
+  .buttons {
+    top: 3%;
+    right: 6%;
+  }
+
+  .btn {
+    i {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+////////// MEDIA Q-MEDIUM /////////
+
+@media only screen and (max-width: $break-medium) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+////////// MEDIA Q-SMALL /////////
+
+@media only screen and (max-width: $break-small) {
+  .buttons {
+    left: 3%;
+  }
+
+  .btn {
+    padding: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}

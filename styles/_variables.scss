@@ -1,0 +1,45 @@
+//COLORS
+$color-primary1: #e67e22;
+$color-primary2: #27ae60;
+
+$color-secondary1: #101010;
+$color-secondary2: #191919;
+
+$color-white: #fff;
+
+$color-black: #000;
+
+$color-grey0: #f8f8f8;
+$color-grey1: #dbe1e8;
+$color-grey2: #b2becd;
+$color-grey3: #6c7983;
+$color-grey4: #454e56;
+$color-grey5: #2a2e35;
+$color-grey6: #12181b;
+
+//TRANSITION
+$transition: all 0.4s ease-in-out;
+
+//BOX SHADOW
+$box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
+
+// MARGINS
+.margin-sml {
+  margin: 1.4rem 0;
+}
+.margin-lrg {
+  margin: 2.8rem 0;
+}
+
+//BREAKPOINTS
+$break-largest: 75em; //1200px
+//areas(html/header)
+
+$break-large: 62.5em; //100px
+//areas(header/about/portfolio)
+
+$break-medium: 50em; //800px
+//areas(header/about/modal/footer/portfolio)
+
+$break-small: 31.2em; //500px
+//areas(header/modal )

@@ -1,0 +1,325 @@
+.section__portfolio {
+  margin-top: 3rem;
+}
+
+.card__cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8rem;
+  justify-content: space-around;
+  padding: 8rem;
+  border: 1px solid $color-grey6;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba($color-grey4, 0.15);
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1.5rem 3rem rgba($color-grey4, 0.3);
+  }
+}
+
+.card {
+  width: 100%;
+  height: 45rem;
+  position: relative;
+  -moz-perspective: 100rem;
+  perspective: 100rem;
+
+  &__side {
+    width: 100%;
+    height: 35rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 1rem 3rem rgba($color-white, 0.15);
+
+    &-front {
+      background-color: #fff;
+
+      &-content-1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-grey5;
+        padding: 1rem 0;
+      }
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          #f8c25f,
+          $color-primary1
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, #8fed8f, #034203);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, #2c2cf8, #0a0396);
+      }
+
+      &-content {
+        width: 90%;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        line-height: 3rem;
+        color: $color-white;
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+    }
+
+    &-back-tag {
+      &::after {
+        content: "Work in progress";
+        position: absolute;
+        top: 8%;
+        right: -17%;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        background-color: #ffd43b;
+        padding: 0.6rem 6rem;
+        transform: rotate(35deg);
+      }
+    }
+
+    &-image {
+      height: 27rem;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, #f8c25f, #d99310),
+          url(../img/profilepic6.jpeg);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, #53f353, #057005),
+          url(../img/food.jpeg);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, #3d79f9, #0539a9),
+          url(../img/travel.jpeg);
+      }
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: right;
+    width: 75%;
+    position: absolute;
+    bottom: 9rem;
+    right: 1.5rem;
+  }
+
+  &__heading-span {
+    padding: 0 0.8rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(#f8c25f, 0.8),
+        rgba(#8a5d09, 0.8)
+      );
+    }
+
+    &-2 {
+      background-image: linear-gradient(to right bottom, #53f353, #057005);
+    }
+
+    &-3 {
+      background-image: linear-gradient(to right bottom, #3d79f9, #0539a9);
+    }
+  }
+}
+
+.card:hover .card__side-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side-back {
+  transform: rotateY(0);
+}
+
+.btn-box {
+  text-align: center;
+}
+
+.sub-btn:link,
+.sub-btn:visited {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1.2rem 3.8rem;
+  border-radius: 50rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-sizing: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 1px solid gray;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all 0.6s;
+  position: relative;
+}
+.sub-btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 50rem;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.sub-btn:hover.sub-btn::after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.sub-btn-1 {
+  color: #b87a06;
+
+  &:hover {
+    background-color: #b87a06;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+}
+
+.sub-btn-2 {
+  color: #057005;
+
+  &:hover {
+    background-color: #057005;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+}
+
+.sub-btn-3 {
+  color: #0539a9;
+
+  &:hover {
+    background-color: #0539a9;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+}
+
+.sub-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+////////// MEDIA Q-LARGE /////////
+@media only screen and (max-width: $break-large) {
+  .card__cont {
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+    &:hover {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .card {
+      max-width: 60rem;
+      height: 50rem;
+
+      &__side {
+        width: 100%;
+        height: 100%;
+
+        &-front {
+          &-content-1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+          }
+        }
+
+        &-back {
+          &-content {
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 1.5;
+            padding: 8rem 4rem;
+          }
+        }
+
+        &-back-tag {
+          &::after {
+            top: 6%;
+            right: -7%;
+          }
+        }
+
+        &-image {
+          height: 80%;
+        }
+      }
+
+      &__heading {
+        font-size: 3.2rem;
+        bottom: 16rem;
+        right: 2.5rem;
+      }
+    }
+  }
+}
+
+////////// MEDIA Q-MEDIUM /////////
+@media only screen and (max-width: $break-medium) {
+  .card__cont {
+    grid-template-columns: 1fr;
+    grid-gap: 6rem;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .card {
+    height: 65rem;
+
+    &__side-back-content {
+      font-size: 4.4rem;
+    }
+  }
+}
+
+////////// MEDIA Q-SMALL /////////
+@media only screen and (max-width: $break-small) {
+  .card__cont {
+    padding: 4rem;
+  }
+
+  .card {
+    max-width: 60rem;
+    height: 45rem;
+  }
+}
